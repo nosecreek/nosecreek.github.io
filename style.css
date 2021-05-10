@@ -616,6 +616,7 @@ nav li.current-menu-item a {
 }
 /* Page Specific Elements */
 /* Extensions */
+.prevnext { display:none; }
 #slider .prevnext,
 #portfolio-slider .prevnext {
   display: block;
