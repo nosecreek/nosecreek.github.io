@@ -14,6 +14,8 @@
 }
 /* Global Variables */
 /* Import the standard libraries */
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap');
+
 /* CSS Reset - http://meyerweb.com/eric/tools/css/reset/ */
 html,
 body,
@@ -173,6 +175,11 @@ h1 {
 h2,
 article h3 {
   font-size: 20px;
+}
+h2.slogan {
+	font-family: "Quicksand";
+	font-weight: 300;
+	font-size: 3em;
 }
 h3,
 h4,
