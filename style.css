@@ -1,0 +1,323 @@
+/* Basic Page Styles */
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'CartoGothicStdBook', Trebuchet MS, Verdana, Geneva, sans-serif;
+	font-weight: normal;
+}
+
+a img {
+	border: 0;
+}
+
+p {
+    margin: 2px 0 10px 0;
+}
+
+a {
+    color: #3484c6;
+}
+
+a:visited {
+	color: #3484c6;
+}
+
+b {
+	font-weight: normal;
+	font-family: 'CartoGothicStdBold', Trebuchet MS, Verdana,Geneva,sans-serif;
+}
+
+i {
+	font-family: 'CartoGothicStdItalic', Trebuchet MS, Verdana,Geneva,sans-serif;
+}
+
+h1 {
+	font-size: 22pt;
+	font-weight: normal;
+}
+
+h2 {
+	font-size: 18pt;
+	font-weight: normal;
+}
+
+h3 {
+	font-size: 18pt;
+	font-weight: normal;
+	font-family: 'CartoGothicStdItalic', Trebuchet MS, Verdana,Geneva,sans-serif;
+	font-style: italic;
+}
+
+.center {
+    width: 100%;
+    text-align: center;
+}
+
+.left {
+	float: left;
+	padding: 0 5px 5px 0;
+}
+
+
+
+/* Page Layout */
+
+body {
+    background-image: url('img/bg.jpg');
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-color: #95c0e4;
+    height:100%;
+    margin:0 auto;
+    padding: 0 10px;
+    max-width:960px;
+    min-width:700px;
+    color: #4f4f4f;
+}
+
+#body-container {
+    background-color:#FFFFFF;
+    max-width:960px;
+    min-height:100%;
+    min-width:780px;
+    position: relative;
+    margin: 10px auto;
+    border: 1px solid #a3adc9;
+    border-radius: 15px; -moz-border-radius: 15px; -khtml-border-radius: 15px; -webkit-border-radius: 15px;
+    -moz-box-shadow: 5px 5px 5px rgba(0, 0, 10, 0.2); -webkit-box-shadow: 5px 5px 5px rgba(0, 0, 10, 0.2);
+}
+
+#header {
+    width: 100%;
+    height: 180px;
+    color: #3484c6;
+}
+    
+    #header-title {
+        position: absolute;
+        top: 70px;
+        right: 20px;
+        font-size: 18pt;
+        font-family: 'QuicksandBook', Trebuchet MS, Verdana,Geneva,sans-serif;
+        text-align: right;
+    }
+
+		.header-dark {
+			font-family: inherit;
+			color: #21547f;
+		}
+
+    #logo {
+        position: absolute;
+        left: 50px;
+        top: 7px;
+    }
+
+    #main-navigation {
+        position: absolute;
+        top: 158px;
+        right: 20px;
+        font-size: 12pt;
+    }
+    
+  	  a.menu-link {
+    		text-decoration: none;
+    		font-family: 'QuicksandBook', Trebuchet MS, Verdana, Geneva, sans-serif;
+  	  }
+  	  
+  	  a.menu-link:hover {
+  		  	text-decoration: underline;
+  	  }
+
+#main-content {
+    padding: 5px 20px;
+}
+
+	hr#top-hr {
+		border: 0;
+		height: 1px;
+		width: 100%;
+		border-top: 1px solid #5dc45d;
+		padding-bottom: 20px;
+	}
+	
+		#hr-end {
+			background-image: url('img/hr-left.png');
+			height: 11px;
+			width: 11px;
+			position: relative;
+			top: -11px;
+		}
+
+#footer {
+    text-align: center;
+    padding: 10px 0 5px 0;
+    margin: 5px 20px;
+    font-size: 10pt;
+    border-top: 1px solid #5dc45d;
+    color: #2d71aa;
+    font-family: 'QuicksandBook', Trebuchet MS, Verdana, Geneva, sans-serif;
+}
+
+.left-box {
+	float: left;
+}
+
+.right-box {
+	float: right;
+}
+
+
+
+/* Page Specific Elements */
+
+
+/* Home Page & Portfolio */
+
+table#home-layout, table#portfolio-images {
+	width: 100%;
+	text-align: center;
+	margin: 0 auto;
+}
+
+	td.home-layout, td.portfolio-images {
+		width: 50%;
+		vertical-align: top;
+		padding-bottom: 20px;
+	}
+	
+	.image-bg {
+		margin: 0 auto;
+		height: 246px;
+		width: 333px;
+		background-image: url('img/home-bg.png');
+		background-repeat: no-repeat;
+		background-position: 11px -5px;
+		text-align: center;
+	}
+	
+	.home-image, .portfolio-image {
+		border: 1px solid #000000;
+	}
+	
+	.home-text {
+		width: 320px;
+		margin: 0 auto;
+		margin-top: -10px;
+		font-size: 12pt;
+	}
+	
+ul.portfolio, b.portfolio {
+	font-size: 14pt;
+}
+
+	li.portfolio {
+		margin-left: 20px;
+	}
+	
+	
+	
+/* Technology */
+
+#technology-wrapper {
+	margin: 0 auto;
+	width: 550px;
+}
+
+p.tech-description {
+	font-family: 'CartoGothicStdItalic', Trebuchet MS, Verdana, Geneva, sans-serif;
+	font-size: 11pt;
+	text-align: center;
+}
+
+.technology-item {
+	margin-bottom: 20px;
+	position: relative;
+}
+
+	.technology-item h3 {
+		font-size: 16pt;
+		font-style: normal;
+		color: #000000;
+	}
+
+	hr.tech {
+		border: 0;
+		border-top: 1px solid #cfe1ef;
+	}
+	
+	.technology-item img {
+		border: 1px solid #000000;
+		margin: 5px 10px 0 0;
+		padding: 0;
+		position: absolute
+	}
+	
+	.technology-item p {
+		padding-left: 160px;
+	}
+
+
+
+/* Contact Us */
+
+body#contact {
+	background-color: #FFFFFF;
+	background-image: none;
+	font-size: 12pt;
+}
+
+h1.contact-us {
+	color: #4e96d2;
+}
+
+body#contact input, body#contact textarea {
+	border: 2px groove black;
+	display: block;
+	padding: 3px;
+	text-align: center;
+	font-size: 12pt;
+	background-color: #FFFFFF;
+	width: auto;
+	height: auto;
+}
+
+body#contact textarea  {
+	text-align: left;
+	height: 154px;
+	width: 300px;
+}
+
+body#contact input:focus, body#contact textarea:focus {
+	background-color: #dbe6ef;
+}
+
+body#contact label {
+	font-family: 'CartoGothicStdBook', Trebuchet MS, Verdana, Geneva, sans-serif;
+}
+
+body#contact input.submit-button {
+	font-family: 'CartoGothicStdBook', Trebuchet MS, Verdana, Geneva, sans-serif;
+	float: right;
+	margin-top: 10px;
+}
+
+body#contact input.submit-button:hover {
+	background-color: #c0c0c0;
+	color: #000000;
+}
+
+body#contact .right-box {
+	width: 310px;
+}
+
+.close-window {
+	position: absolute;
+	bottom: 2em;
+	left: 0;
+}
+
+body#contact * {
+	clear: none;
+}
