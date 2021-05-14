@@ -502,7 +502,7 @@ nav li.current-menu-item a {
 #contactform input[type="email"],
 #contactform textarea,
 #contactform button, .paypal-button,
-#smart-button-container input[type="text"] {
+#smart-button-container input[type="text"], #smart-button-container input[type="number"] {
   text-align: left;
   font-size: 14px;
   font-family: 'Open Sans', Helvetica, Arial, sans-serif;
@@ -526,7 +526,7 @@ nav li.current-menu-item a {
 #contactform input[type="text"],
 #contactform input[type="email"],
 #contactform textarea,
-#smart-button-container input[type="text"] {
+#smart-button-container input[type="text"], #smart-button-container input[type="number"] {
   width: 100%;
   background-color: #d4d7c1;
 }
@@ -858,7 +858,7 @@ nav li.current-menu-item a {
   }
   #contactform input[type="text"],
   #contactform input[type="email"],
-  #contactform textarea, #smart-button-container input[type="text"] {
+  #contactform textarea, #smart-button-container input[type="text"], #smart-button-container input[type="number"] {
     max-width: 90%;
   }
   .contact-notice {
