@@ -532,7 +532,7 @@ nav li.current-menu-item a {
 }
 #contactform input[type="text"]:focus,
 #contactform input[type="email"]:focus,
-#contactform textarea:focus {
+#contactform textarea:focus, #smart-button-container input[type="text"]:focus, #smart-button-container input[type="number"]:focus {
   -webkit-box-shadow: inset 0.4px 2px 3px #999999;
   -moz-box-shadow: inset 0.4px 2px 3px #999999;
   box-shadow: inset 0.4px 2px 3px #999999;
@@ -722,6 +722,7 @@ nav li.current-menu-item a {
 }
 #smart-button-container {
 	float: left;
+	width: 35%;
 }
 @media screen and (min-width: 870px) and (max-width: 1000px) {
   #portfolio-slider {
