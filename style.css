@@ -512,7 +512,9 @@ nav li.current-menu-item a {
 }
 #contactform input,
 #contactform textarea,
-#contactform button {
+#contactform button,
+#smart-button-container input,
+.paypal-button {
   border-radius: 4px;
   display: block;
   border: none;
@@ -717,6 +719,9 @@ nav li.current-menu-item a {
 }
 .mobile {
   display: none;
+}
+#smart-button-container {
+	float: left;
 }
 @media screen and (min-width: 870px) and (max-width: 1000px) {
   #portfolio-slider {
