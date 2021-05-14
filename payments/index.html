@@ -1,0 +1,184 @@
+
+<!DOCTYPE html>
+<!--[if lt IE 7 ]> <html class="ie6"> <![endif]-->
+<!--[if IE 7 ]>    <html class="ie7"> <![endif]-->
+<!--[if IE 8 ]>    <html class="ie8"> <![endif]-->
+<!--[if IE 9 ]>    <html class="ie9"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--> <html class=""> <!--<![endif]-->
+	<head>
+		
+		<meta charset="UTF-8" />
+		
+		<title>Nose Creek Web Design Airdrie:  Quality, Affordable Website Design in Airdrie, AB.</title>
+		
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		
+		<link rel="shortcut icon" href="//nosecreekweb.ca/img/favicon.ico" />
+		
+		<!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+		<!--[if lt IE 9]>
+			<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+		<![endif]-->
+		
+		<link rel="stylesheet" type="text/css" media="all" href="//nosecreekweb.ca/style.css" />
+	
+	</head>
+
+	<body>
+		
+		<header id="header">
+			
+			<div id="logo">
+				<h1><a href="http://nosecreekweb.ca/" title="Nose Creek Web Design Airdrie" rel="home"><img src="//nosecreekweb.ca/img/logo@2x.png" alt="Nose Creek Web Design Airdrie" /></a></h1>
+			</div>
+			
+			<nav>
+				<ul>
+					<li id="menu-item-6"><a href="http://nosecreekweb.ca/#webdesign">Web Design</a></li>
+					<li id="menu-item-5"><a href="http://nosecreekweb.ca/#portfolio">Portfolio</a></li>
+					<li id="menu-item-7"><a href="http://nosecreekweb.ca/#seo">Other Services</a></li>
+					<li id="menu-item-9"><a href="http://nosecreekweb.ca/#contact">Contact</a></li>
+				</ul>
+			</nav>
+			
+		</header>
+		
+		<section id="webdesign">
+			<h2>Make a Payment</h2>
+			
+			<div id="smart-button-container">
+				<div style="text-align: center"><input placeholder="Your Business Name" type="text" name="descriptionInput" id="description" maxlength="127" value=""></div>
+				  <p id="descriptionError" style="visibility: hidden; color:red; text-align: center;">Please your business name</p>
+				<div style="text-align: center"><input placeholder="Payment Amount" name="amountInput" type="number" id="amount" value="" ><span> CAD</span></div>
+				  <p id="priceLabelError" style="visibility: hidden; color:red; text-align: center;">Please enter a payment amount</p>
+				<div id="invoiceidDiv" style="text-align: center; display: none;"><label for="invoiceid"> </label><input name="invoiceid" maxlength="127" type="text" id="invoiceid" value="" ></div>
+				  <p id="invoiceidError" style="visibility: hidden; color:red; text-align: center;">Please enter an Invoice ID</p>
+				<div style="text-align: center; margin-top: 0.625rem;" id="paypal-button-container"></div>
+			</div>
+			  <script src="https://www.paypal.com/sdk/js?client-id=sb&currency=CAD" data-sdk-integration-source="button-factory"></script>
+			  <script>
+			  function initPayPalButton() {
+				var description = document.querySelector('#smart-button-container #description');
+				var amount = document.querySelector('#smart-button-container #amount');
+				var descriptionError = document.querySelector('#smart-button-container #descriptionError');
+				var priceError = document.querySelector('#smart-button-container #priceLabelError');
+				var invoiceid = document.querySelector('#smart-button-container #invoiceid');
+				var invoiceidError = document.querySelector('#smart-button-container #invoiceidError');
+				var invoiceidDiv = document.querySelector('#smart-button-container #invoiceidDiv');
+
+				var elArr = [description, amount];
+
+				if (invoiceidDiv.firstChild.innerHTML.length > 1) {
+				  invoiceidDiv.style.display = "block";
+				}
+
+				var purchase_units = [];
+				purchase_units[0] = {};
+				purchase_units[0].amount = {};
+
+				function validate(event) {
+				  return event.value.length > 0;
+				}
+
+				paypal.Buttons({
+				  style: {
+					color: 'blue',
+					shape: 'rect',
+					label: 'pay',
+					layout: 'vertical',
+					
+				  },
+
+				  onInit: function (data, actions) {
+					actions.disable();
+
+					if(invoiceidDiv.style.display === "block") {
+					  elArr.push(invoiceid);
+					}
+
+					elArr.forEach(function (item) {
+					  item.addEventListener('keyup', function (event) {
+						var result = elArr.every(validate);
+						if (result) {
+						  actions.enable();
+						} else {
+						  actions.disable();
+						}
+					  });
+					});
+				  },
+
+				  onClick: function () {
+					if (description.value.length < 1) {
+					  descriptionError.style.visibility = "visible";
+					} else {
+					  descriptionError.style.visibility = "hidden";
+					}
+
+					if (amount.value.length < 1) {
+					  priceError.style.visibility = "visible";
+					} else {
+					  priceError.style.visibility = "hidden";
+					}
+
+					if (invoiceid.value.length < 1 && invoiceidDiv.style.display === "block") {
+					  invoiceidError.style.visibility = "visible";
+					} else {
+					  invoiceidError.style.visibility = "hidden";
+					}
+
+					purchase_units[0].description = description.value;
+					purchase_units[0].amount.value = amount.value;
+
+					if(invoiceid.value !== '') {
+					  purchase_units[0].invoice_id = invoiceid.value;
+					}
+				  },
+
+				  createOrder: function (data, actions) {
+					return actions.order.create({
+					  purchase_units: purchase_units,
+					});
+				  },
+
+				  onApprove: function (data, actions) {
+					return actions.order.capture().then(function (details) {
+					  alert('Transaction completed by ' + details.payer.name.given_name + '!');
+					});
+				  },
+
+				  onError: function (err) {
+					console.log(err);
+				  }
+				}).render('#paypal-button-container');
+			  }
+			  initPayPalButton();
+			  </script>
+			
+			<div id="other-2">
+				<p>Cheques should be made payable to "Dustin Lammiman" and mailed to:</p>
+				<p>
+					50 Taraglen Rd NE<br>
+					Calgary, AB T3J 2N6
+				</p>
+				<p>&nbsp;</p>
+				<p>
+					Interac e-Transfers can be sent to <a href="/cdn-cgi/l/email-protection#84f4e5fde9e1eaf0f7c4eaebf7e1e7f6e1e1eff3e1e6aae7e5"><span class="__cf_email__" data-cfemail="fb8b9a82969e958f88bb9594889e98899e9e908c9e99d5989a">[email&#160;protected]</span></a>
+				</p>
+			</div>
+		</section>
+		
+		
+		<footer id="footer" itemscope itemtype="http://schema.org/LocalBusiness">
+			&copy;2012-2021 <a href="http://www.nosecreekweb.ca/" itemprop="name">Nose Creek Web Design</a>. All rights reserved.
+			<span itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
+				<span itemprop="addressLocality">Airdrie</span>, 
+				<span itemprop="addressRegion">AB</span>
+				<span itemprop="addressCountry">Canada</span>.
+			</span>
+			<a href="https://plus.google.com/100303134264800323712" target="_blank">Find us on Google+</a>.
+		</footer>
+		
+	<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script></body>
+</html>
+
