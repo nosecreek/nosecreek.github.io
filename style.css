@@ -501,7 +501,7 @@ nav li.current-menu-item a {
 #contactform input[type="submit"],
 #contactform input[type="email"],
 #contactform textarea,
-#contactform button {
+#contactform button, .paypal-button {
   text-align: left;
   font-size: 14px;
   font-family: 'Open Sans', Helvetica, Arial, sans-serif;
@@ -536,7 +536,7 @@ nav li.current-menu-item a {
 #contactform .lastname-000 {
   display: none;
 }
-#contactform #thename {
+#contactform #thename, #smart-button-container #description {
   background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAANCAYAAACQN/8FAAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAAN1wAADdcBQiibeAAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAACJSURBVChTY/j//z8DDBsbGxcB8XMozkOWQ1bkAMT/0bA9NoXFWBQWYVMIAn+RFP0BYiMMhVDFIUB8HIoDsbqREEY2jQmIzYA4HYpNgZgRRSFQQBGID2LxzD4gVgArBDJ4gfgeFkUwDJLjBSnswaMIhntACi8QofACSOEnIhR+gsXIVzyKvgBxEQCnUPQAP/qFFAAAAABJRU5ErkJggg==);
   background-position: 9px 9px;
 }
@@ -552,12 +552,12 @@ nav li.current-menu-item a {
   background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA0AAAANCAYAAABy6+R8AAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAAN1wAADdcBQiibeAAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAACqSURBVCiRhdI9CsJAEIbheBMDFmoUhK39PUpKCw/iCTyFlYexsbLRNCIqIkbXb2AGhiE7Fm/zhQey2WQxxixVCCFHO3RFB7RCLQ8MUIWiafkPPFCJjgrtm0CBzgwWvHUUvFjQt0A9KxltLTglwJx3euW2jD0HzBQY0kZj1wFTdNdAEB2wRhs0UmDSBAS91Oes+WzjFBD0Npe3RrcUEPRR4IueHhBkfxMXUD/2vlHDQeg63AAAAABJRU5ErkJggg==);
   line-height: 21px;
 }
-#contactform #amount {
+#contactform #amount, #smart-button-container #amount {
   background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA0AAAANCAYAAABy6+R8AAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH4AQLEQw0aPTiHQAAANhJREFUKM+F0bFKQ0EQBdCTF9Hm/YGVJhaa0tZPME3+wL8Q0qpfImhtrY1EbQXBQrBRC0FImoCJEmMzgSVvn14Yht29M3fubFMVK5jhB9dqCAu0sIPVOG9jH5+4wWS5uIVbzDMxw3FOsRuELrYi2ljHNx5z4zUiv+A5/CwwDbVK0Rs+cIUzXOIJI5RJ43laXKCHC7wnXu5whDV/oIyl7OEQD9HgJEfuxePm0n2BL9znPDUjt4Momb+IDVawi9eafxrjICU3EqUONsLXaWzxHEMM/IMyFPp1hF+bHjfq4LTYCgAAAABJRU5ErkJggg==);
   background-position: 9px 9px;
 }
 #contactform input[type="submit"],
-#contactform button {
+#contactform button, .paypal-button {
   background-color: #4e7799;
   color: #fff;
   float: right;
@@ -570,7 +570,7 @@ nav li.current-menu-item a {
   left: 29px;
 }
 #contactform input[type="submit"]:active,
-#contactform button:active {
+#contactform button:active, .paypal-button {
   top: -2px;
 }
 .ie7 #contactform #thename {
@@ -845,13 +845,13 @@ nav li.current-menu-item a {
     left: 0;
     margin-top: 20px;
   }
-  #contactform input[type="submit"] {
+  #contactform input[type="submit"], .paypal-button {
     float: none;
     left: 0;
   }
   #contactform input[type="text"],
   #contactform input[type="email"],
-  #contactform textarea {
+  #contactform textarea, #smart-button-container input[type="text"] {
     max-width: 90%;
   }
   .contact-notice {
