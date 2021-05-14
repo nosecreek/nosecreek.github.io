@@ -846,7 +846,7 @@ nav li.current-menu-item a {
     width: 100%;
     float: none;
   }
-  #contactform {
+  #contactform, #smart-button-container {
     float: none;
     margin-left: 0;
     width: 100%;
