@@ -17,7 +17,7 @@
 		<meta name="Description" content="Nose Creek Web Design provides website design services to Airdrie, Calgary, and beyond. Mobile and responsive website design, WordPress, hosting, SEO, Google Maps. Build a vibrant online presence for your business." />
 		
 		<link rel="shortcut icon" href="/img/favicon.ico" />
-		<link rel="canonical" href="http://www.nosecreekweb.ca/" />
+		<link rel="canonical" href="https://www.nosecreekweb.ca/" />
 		
 		<link rel="stylesheet" type="text/css" media="all" href="style.css" />
 			
@@ -68,23 +68,23 @@
 				<div id="portfolio-slider">
 					<div class="slides_container">
 						<div class="slide">
-							<a href="http://www.moviemakers.ca/" target="_blank"><img src="/img/mmakers.png" alt="MovieMakers" /></a>
+							<a href="http://www.moviemakers.ca/" target="_blank"><img src="/img/mmakers.png" alt="MovieMakers" width="350" height="192" /></a>
 							<h3>MovieMakers </h3><span class="link">(<a href="http://www.moviemakers.ca/" target="_blank">Visit Site</a>)</span>
 							<p>MovieMakers is an Airdrie based family business. Nose Creek has created all aspects of this site. Features include a blog and a robust online store. The site contains many videos, which are played using the VideoJS for WordPress plugin, which was developed by Nose Creek Web Design.</p>
 						</div>
 						<div class="slide">
-							<a href="https://www.harderhomes.ca/." target="_blank"><img src="/img/harder.jpg" alt="Harder Homes" /></a>
+							<a href="https://www.harderhomes.ca/." target="_blank"><img src="/img/harder.jpg" alt="Harder Homes" width="350" height="192" /></a>
 							<h3>Harder Homes </h3><span class="link">(<a href="https://www.harderhomes.ca/" target="_blank">Visit Site</a>)</span>
 							<p>Harder Homes is a family owned business building new custom estate homes in Airdrie, Calgary and the
 							surrounding area.</p>
 						</div>
 						<div class="slide">
-							<a href="https://dcdrilling.com/" target="_blank"><img src="/img/dc.jpg" alt="DC Drilling" /></a>
+							<a href="https://dcdrilling.com/" target="_blank"><img src="/img/dc.jpg" alt="DC Drilling" width="350" height="192" /></a>
 							<h3>DC Drilling </h3><span class="link">(<a href="https://dcdrilling.com/" target="_blank">Visit Site</a>)</span>
 							<p>DC Drilling is a leading provider of contract drilling in Alberta, Canada.</p>
 						</div>
 						<div class="slide">
-							<a href="https://asavonmoving.com/" target="_blank"><img src="/img/savon.jpg" alt="A-$AV-ON Moving" /></a>
+							<a href="https://asavonmoving.com/" target="_blank"><img src="/img/savon.jpg" alt="A-$AV-ON Moving" width="350" height="192" /></a>
 							<h3>A-$AV-ON Moving </h3><span class="link">(<a href="https://asavonmoving.com/" target="_blank">Visit Site</a>)</span>
 							<p>A-$AV-ON Moving has provided reliable moving services to Calgary & Western Canada for over 25 years.</p>
 						</div>
@@ -165,7 +165,7 @@
 				var target = this.hash,
 					$target = $(target);
 				$('html, body').stop().animate({
-					'scrollTop': $target.offset().top
+					'scrollTop': $target.offset()?.top
 				}, 500, 'swing', function () {
 					window.location.hash = target;
 				});
